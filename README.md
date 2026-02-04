@@ -67,6 +67,31 @@ Copying folder models--some-org--some-model to /Users/yourname/.cache/huggingfac
 Folder successfully copied to /Users/yourname/.cache/huggingface/hub/models--some-org--some-model
 ```
 
+## Troubleshooting
+
+### "Permission denied" when running the script
+
+The script needs to be executable. From the folder that contains `copy_models.sh`, run:
+
+```bash
+chmod +x copy_models.sh
+```
+
+Then run it with `./copy_models.sh`. Alternatively, you can always run it with `bash copy_models.sh` (no chmod needed).
+
+### "Permission denied" when copying to the cache
+
+Make sure your user can write to `~/.cache/huggingface/hub/`. If that directory is owned by another user or root, fix ownership or run the script with a user that has write access.
+
+### No folders found
+
+The script only looks at the **current directory**. Run it from the path that actually contains the model folders (e.g. your USB mount point), for example:
+
+```bash
+cd /Volumes/YourUSBName
+./copy_models.sh
+```
+
 ## Notes
 
 - Only **top-level** directories are listed; hidden directories (names starting with `.`) are skipped.
