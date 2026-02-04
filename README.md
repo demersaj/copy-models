@@ -38,6 +38,9 @@ Folder names are shown without the `models--` prefix for readability; the actual
    - Enter the number of the model you want, or `q` to quit.
    - It copies the chosen folder into your cache and reports success or failure.
 
+<img width="753" height="569" alt="image" src="https://github.com/user-attachments/assets/cd18696c-6735-43ad-882c-39cf70b4f079" />
+
+
 ## Cache location
 
 Models are copied to:
@@ -46,7 +49,7 @@ Models are copied to:
 /Users/<your-username>/.cache/huggingface/hub/<model-folder-name>/
 ```
 
-This is the default Hugging Face Hub cache directory, so models will be found by `transformers`, `diffusers`, and other HF tools without extra config.
+This is the default Hugging Face Hub cache directory, so models will be found by `transformers`, `diffusers`, and Navigator tools without extra config.
 
 ## Example
 
